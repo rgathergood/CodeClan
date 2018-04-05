@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Rock Paper Scissors</string>
+    <string name="rock">Rock</string>
+    <string name="paper">Paper</string>
+    <string name="scissors">Scissors</string>
+    <string name="make_your_decision">Make your decision!</string>
+    <string name="howToPlay">How to Play</string>
+    <string name="reset_score">Reset Score</string>
+    <string name="htp">How to Play</string>
+</resources>
