@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/BearFishRiver.iml" filepath="$PROJECT_DIR$/.idea/modules/BearFishRiver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/BearFishRiver_main.iml" filepath="$PROJECT_DIR$/.idea/modules/BearFishRiver_main.iml" group="BearFishRiver" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/BearFishRiver_test.iml" filepath="$PROJECT_DIR$/.idea/modules/BearFishRiver_test.iml" group="BearFishRiver" />
+    </modules>
+  </component>
+</project>
