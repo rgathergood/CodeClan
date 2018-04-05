@@ -1,0 +1,49 @@
+/* body {
+  color: black;
+} */
+
+/* p, a {
+  color: yellow;
+} */
+
+.yellow {
+  color: yellow;
+}
+
+#emailaddress {
+  color: red;
+}
+
+h3 {
+  color: orange;
+}
+
+div {
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  padding-top: 10px;
+
+  font-size: 1em;
+
+/* top right bottom left */
+  margin: 10px 12px 11px 13px;
+
+  /* all */
+  margin: 10px;
+
+  /* top/bottom left/right */
+  margin: 10px 20px;
+}
+
+/* view port
+vw view width
+vh view height */
+
+p {
+  display: inline;
+}
+
+li {
+  display: inline;
+}

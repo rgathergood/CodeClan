@@ -1,0 +1,22 @@
+body {
+  text-align: center;
+  background-color: maroon;
+}
+
+ul {
+  background-color: purple;
+  padding: 0.5em;
+}
+
+li {
+  display: inline;
+  padding: 5em;
+}
+
+a {
+  color: white;
+}
+
+h1 {
+  color: gold;
+}
