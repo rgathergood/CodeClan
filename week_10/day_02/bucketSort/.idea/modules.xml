@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bucketSort.iml" filepath="$PROJECT_DIR$/.idea/modules/bucketSort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bucketSort_main.iml" filepath="$PROJECT_DIR$/.idea/modules/bucketSort_main.iml" group="bucketSort" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bucketSort_test.iml" filepath="$PROJECT_DIR$/.idea/modules/bucketSort_test.iml" group="bucketSort" />
+    </modules>
+  </component>
+</project>
