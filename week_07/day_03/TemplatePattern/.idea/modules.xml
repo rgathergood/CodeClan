@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TemplatePattern.iml" filepath="$PROJECT_DIR$/.idea/modules/TemplatePattern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TemplatePattern_main.iml" filepath="$PROJECT_DIR$/.idea/modules/TemplatePattern_main.iml" group="TemplatePattern" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TemplatePattern_test.iml" filepath="$PROJECT_DIR$/.idea/modules/TemplatePattern_test.iml" group="TemplatePattern" />
+    </modules>
+  </component>
+</project>

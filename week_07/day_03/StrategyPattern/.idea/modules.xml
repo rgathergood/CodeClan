@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/StrategyPattern.iml" filepath="$PROJECT_DIR$/.idea/modules/StrategyPattern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/StrategyPattern_main.iml" filepath="$PROJECT_DIR$/.idea/modules/StrategyPattern_main.iml" group="StrategyPattern" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/StrategyPattern_test.iml" filepath="$PROJECT_DIR$/.idea/modules/StrategyPattern_test.iml" group="StrategyPattern" />
+    </modules>
+  </component>
+</project>
