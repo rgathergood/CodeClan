@@ -1,0 +1,4 @@
+rootProject.name = 'Week10CodeTest'
+include 'ShoppingBasket'
+findProject(':ShoppingBasket')?.name = 'week10'
+
