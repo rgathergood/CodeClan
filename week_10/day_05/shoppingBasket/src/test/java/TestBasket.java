@@ -11,13 +11,15 @@ public class TestBasket {
     private Customer customer1;
     private Item item1;
     private Item item2;
+    private Item item3;
 
     @Before
     public void before(){
         customer1 = new Customer("Gary", false);
         basket = new Basket(customer1);
-        item1 = new Item("Jacket", 19.99);
-        item2 = new Item("Jeans", 39.99);
+        item1 = new Item("Jacket", 19.99, 1);
+        item2 = new Item("Jeans", 39.99, 1);
+        item3 = new Item("Shorts", 15.00, 2);
     }
 
     @Test
@@ -39,9 +41,9 @@ public class TestBasket {
     @Test
     public void canRemoveItem() {
         basket.addItem(item1);
-        basket.addItem(item2);
+        basket.addItem(item3);
         basket.removeItem(item1);
-        assertEquals(1, basket.basketItemCount());
+        assertEquals(2, basket.basketItemCount());
     }
 
     @Test
@@ -80,5 +82,19 @@ public class TestBasket {
         assertEquals(true, basket.customerHasLoyaltyCard());
         assertEquals(19.59, basket.basketTotalValue(), 0.01);
 
+    }
+
+    @Test
+    public void customerHasBogof() {
+        basket.addItem(item3);
+        assertEquals(15.00, basket.basketTotalValue(), 0.01);
+    }
+
+    @Test
+    public void customerHasBogofwLoyalty() {
+        Customer customer = new Customer("Glenda", true);
+        Basket basket = new Basket(customer);
+        basket.addItem(item3);
+        assertEquals(14.70, basket.basketTotalValue(), 0.01);
     }
 }
