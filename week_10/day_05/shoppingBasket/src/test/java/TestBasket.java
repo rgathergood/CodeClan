@@ -42,8 +42,8 @@ public class TestBasket {
     public void canRemoveItem() {
         basket.addItem(item1);
         basket.addItem(item3);
-        basket.removeItem(item1);
-        assertEquals(2, basket.basketItemCount());
+        basket.removeItem(item3);
+        assertEquals(1, basket.basketItemCount());
     }
 
     @Test

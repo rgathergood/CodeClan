@@ -27,7 +27,11 @@ public class Basket {
     }
 
     public void removeItem(Item item) {
-        items.remove(item);
+//        if (item.getQuantity() < 2) {
+            items.remove(item);
+//        } else {
+//            (item.setQuantity());
+//        }
     }
 
     public void emptyBasket() {
@@ -42,9 +46,9 @@ public class Basket {
     }
 
     public double basketTotalValue() {
-        for(Item item : items ) {
+        for (Item item : items) {
             total += item.getPrice();
-            if (item.getQuantity() % 2 == 0 ) {
+            if (item.getQuantity() % 2 == 0) {
                 total -= item.getPrice() / 2;
             }
             if (total >= 20.01) {
