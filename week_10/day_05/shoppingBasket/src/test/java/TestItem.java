@@ -26,4 +26,10 @@ public class TestItem {
     public void canGetQuantity() {
         assertEquals(2, item1.getQuantity());
     }
+
+    @Test
+    public void canReduceQuantity() {
+        item1.reduceQuantity();
+        assertEquals(1, item1.getQuantity());
+    }
 }

@@ -23,7 +23,7 @@ public class Item {
         return quantity;
     }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
+    public void reduceQuantity() {
+        this.quantity -= 1;
     }
 }

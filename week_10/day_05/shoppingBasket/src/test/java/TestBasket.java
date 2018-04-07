@@ -43,7 +43,7 @@ public class TestBasket {
         basket.addItem(item1);
         basket.addItem(item3);
         basket.removeItem(item3);
-        assertEquals(1, basket.basketItemCount());
+        assertEquals(2, basket.basketItemCount());
     }
 
     @Test

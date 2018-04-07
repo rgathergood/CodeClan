@@ -27,11 +27,11 @@ public class Basket {
     }
 
     public void removeItem(Item item) {
-//        if (item.getQuantity() < 2) {
+        if (item.getQuantity() < 2) {
             items.remove(item);
-//        } else {
-//            (item.setQuantity());
-//        }
+        } else {
+            item.reduceQuantity();
+        }
     }
 
     public void emptyBasket() {
