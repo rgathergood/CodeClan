@@ -10,11 +10,16 @@ public class TestCustomer {
 
     @Before
     public void before() {
-        customer1 = new Customer("Gary");
+        customer1 = new Customer("Gary", false);
     }
 
     @Test
     public void customerHasName() {
         assertEquals("Gary", customer1.getName());
+    }
+
+    @Test
+    public void customerHasLoyaltyCard() {
+        assertEquals(false, customer1.hasLoyaltyCard());
     }
 }

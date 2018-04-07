@@ -14,7 +14,7 @@ public class TestBasket {
 
     @Before
     public void before(){
-        customer1 = new Customer("Gary");
+        customer1 = new Customer("Gary", false);
         basket = new Basket(customer1);
         item1 = new Item("Jacket", 19.99);
         item2 = new Item("Jeans", 39.99);
@@ -23,6 +23,11 @@ public class TestBasket {
     @Test
     public void basketHasCustomer() {
     assertEquals("Gary", basket.getCustomerName());
+    }
+
+    @Test
+    public void basketCustomerHasLoyaltyCard() {
+        assertEquals(false, customer1.hasLoyaltyCard());
     }
 
     @Test
@@ -65,5 +70,15 @@ public class TestBasket {
         basket.addItem(item2);
         basket.removeItem(item1);
         assertEquals(35.99, basket.basketTotalValue(), 0.01);
+    }
+
+    @Test
+    public void customerHasLoyaltyCardApplied() {
+        Customer customer = new Customer("Glenda", true);
+        Basket basket = new Basket(customer);
+        basket.addItem(item1);
+        assertEquals(true, basket.customerHasLoyaltyCard());
+        assertEquals(19.59, basket.basketTotalValue(), 0.01);
+
     }
 }

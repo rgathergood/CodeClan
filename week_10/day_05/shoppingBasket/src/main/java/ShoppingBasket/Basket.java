@@ -17,6 +17,10 @@ public class Basket {
         return customer.getName();
     }
 
+    public boolean customerHasLoyaltyCard() {
+        return customer.hasLoyaltyCard();
+    }
+
     public void addItem(Item item) {
         items.add(item);
     }
@@ -38,6 +42,9 @@ public class Basket {
             total += item.getPrice();
             if (total >= 20.01) {
                 total -= (total * 0.1);
+            }
+            if (customer.hasLoyaltyCard()) {
+                total -= (total * 0.02);
             }
         }
         return total;
