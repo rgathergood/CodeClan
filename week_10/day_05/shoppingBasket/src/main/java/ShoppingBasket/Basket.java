@@ -36,6 +36,9 @@ public class Basket {
     public double basketTotalValue() {
         for(Item item : items ) {
             total += item.getPrice();
+            if (total >= 20.01) {
+                total -= (total * 0.1);
+            }
         }
         return total;
     }

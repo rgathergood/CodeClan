@@ -7,10 +7,10 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class TestBasket {
-    Basket basket;
-    Customer customer1;
-    Item item1;
-    Item item2;
+    private Basket basket;
+    private Customer customer1;
+    private Item item1;
+    private Item item2;
 
     @Before
     public void before(){
@@ -56,7 +56,7 @@ public class TestBasket {
     public void canGetTotal() {
         basket.addItem(item1);
         basket.addItem(item2);
-        assertEquals(59.98, basket.basketTotalValue(), 0.01);
+        assertEquals(53.98, basket.basketTotalValue(), 0.01);
     }
 
     @Test
@@ -64,6 +64,6 @@ public class TestBasket {
         basket.addItem(item1);
         basket.addItem(item2);
         basket.removeItem(item1);
-        assertEquals(39.99, basket.basketTotalValue(), 0.01);
+        assertEquals(35.99, basket.basketTotalValue(), 0.01);
     }
 }

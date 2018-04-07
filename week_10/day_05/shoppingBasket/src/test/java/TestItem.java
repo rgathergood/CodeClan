@@ -5,7 +5,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class TestItem {
-    Item item1;
+    private Item item1;
 
     @Before
     public void before() {
