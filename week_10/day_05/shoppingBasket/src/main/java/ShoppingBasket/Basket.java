@@ -6,7 +6,6 @@ public class Basket {
     private Customer customer;
     private ArrayList<Item> items;
     private double total;
-    private int itemCount;
 
     public Basket(Customer customer) {
         this.customer = customer;
@@ -39,6 +38,7 @@ public class Basket {
     }
 
     public int basketItemCount() {
+        int itemCount = 0;
         for (Item item : items) {
             itemCount += item.getQuantity();
         }
@@ -49,6 +49,10 @@ public class Basket {
         for (Item item : items) {
             total += item.getPrice();
             if (item.getQuantity() % 2 == 0) {
+                total -= item.getPrice() / 2;
+            }
+            if (item.getQuantity() % 2 == 1) {
+                item.reduceQuantity();
                 total -= item.getPrice() / 2;
             }
             if (total >= 20.01) {

@@ -12,6 +12,8 @@ public class TestBasket {
     private Item item1;
     private Item item2;
     private Item item3;
+    private Item item4;
+    private Item item5;
 
     @Before
     public void before(){
@@ -20,6 +22,8 @@ public class TestBasket {
         item1 = new Item("Jacket", 19.99, 1);
         item2 = new Item("Jeans", 39.99, 1);
         item3 = new Item("Shorts", 15.00, 2);
+        item4 = new Item("Socks", 5.00, 5);
+        item5 = new Item("Jean Shorts", 10.00, 7);
     }
 
     @Test
@@ -40,10 +44,11 @@ public class TestBasket {
 
     @Test
     public void canRemoveItem() {
-        basket.addItem(item1);
         basket.addItem(item3);
         basket.removeItem(item3);
-        assertEquals(2, basket.basketItemCount());
+        assertEquals(1, basket.basketItemCount());
+        basket.removeItem(item3);
+        assertEquals(0, basket.basketItemCount());
     }
 
     @Test
@@ -93,8 +98,13 @@ public class TestBasket {
 
     @Test
     public void customerHasBogof() {
-        basket.addItem(item3);
+        basket.addItem(item4);
         assertEquals(15.00, basket.basketTotalValue(), 0.01);
+    }
+    @Test
+    public void customerHasBogof1() {
+        basket.addItem(item5);
+        assertEquals(36.00, basket.basketTotalValue(), 0.01);
     }
 
     @Test
