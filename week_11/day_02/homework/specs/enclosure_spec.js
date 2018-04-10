@@ -40,6 +40,25 @@ describe('Enclosure', function () {
     enclosure.addDinosaur(dinosaur3);
     const actual = enclosure.returnIfOffspringIsGreaterThanTwo();
     assert.deepStrictEqual(actual, [dinosaur3]);
-  })
+  });
+
+  it('should be able to return no. of dinosaurs after 1 year', function () {
+    enclosure.addDinosaur(dinosaur2);
+    const actual = enclosure.getDinosaursBornAfterYears(1);
+    assert.strictEqual(actual, 2);
+  });
+
+  it('should be able to return no. of dinosaurs after 2 year', function () {
+    enclosure.addDinosaur(dinosaur1);
+    const actual = enclosure.getDinosaursBornAfterYears(2);
+    assert.strictEqual(actual, 9);
+  });
+
+  it('should be able to return no. of dinosaurs after 2 year, with 2 dinosaurs', function () {
+    enclosure.addDinosaur(dinosaur1);
+    enclosure.addDinosaur(dinosaur3);
+    const actual = enclosure.getDinosaursBornAfterYears(2);
+    assert.strictEqual(actual, 25);
+  });
 
 });
