@@ -20,7 +20,7 @@ Enclosure.prototype.returnIfOffspringIsGreaterThanTwo = function () {
 
 Enclosure.prototype.getDinosaursBornAfterYears = function (years) {
   let dinosaursBorn = 0;
-  for (var i = 0; i < this.dinosaurs.length; i++) {
+  for (let i = 0; i < this.dinosaurs.length; i++) {
     let dinosaur = this.dinosaurs[i]
     dinosaursBorn += (1 + dinosaur.offspring) ** years;
   }

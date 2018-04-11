@@ -5,7 +5,9 @@ const Dinosaur = require('../dinosaur.js');
 describe('Enclosure', function () {
 
   let enclosure;
-  let dinosaur;
+  let dinosaur1;
+  let dinosaur2;
+  let dinosaur3;
 
   beforeEach(function () {
     enclosure = new Enclosure();
