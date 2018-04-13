@@ -2,8 +2,7 @@ const Hero = function (name, health, favouriteFood) {
   this.name = name;
   this.health = health;
   this.favouriteFood = favouriteFood;
-  this.questsToComplete = [];
-  this.completedQuests = [];
+  this.questList = [];
   this.moneyBag = 0;
 }
 
@@ -12,7 +11,7 @@ Hero.prototype.saysHello = function () {
 };
 
 Hero.prototype.addQuest = function (quest) {
-  this.questsToComplete.push(quest);
+  this.questList.push(quest);
 };
 
 Hero.prototype.addMoney = function (amount) {
@@ -21,10 +20,7 @@ Hero.prototype.addMoney = function (amount) {
 
 Hero.prototype.completeQuest = function (quest) {
   quest.markQuestComplete();
-  const index = this.questsToComplete.indexOf(quest);
-  this.questsToComplete.splice(index, 1);
   this.addMoney(quest.reward);
-  this.completedQuests.push(quest);
 };
 
 Hero.prototype.eatFood = function (food) {
@@ -33,6 +29,34 @@ Hero.prototype.eatFood = function (food) {
   } else {
     this.health += food.healthPoints;
   }
+};
+
+Hero.prototype.sortQuestsByDifficulty = function () {
+  this.questList.sort((questA, questB) => {
+    if (questA.difficulty > questB.difficulty) {
+      return -1;
+    }
+    if (questA.difficulty < questB.difficulty) {
+      return 1;
+    }
+    return 0;
+  });
+};
+
+Hero.prototype.sortQuestsByUrgency = function (property) {
+
+};
+
+Hero.prototype.sortQuestsByReward = function (property) {
+
+};
+
+Hero.prototype.filterByComplete = function () {
+
+};
+
+Hero.prototype.filterByUncomplete = function () {
+
 };
 
 module.exports = Hero;

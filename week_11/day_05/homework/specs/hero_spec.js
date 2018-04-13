@@ -30,11 +30,7 @@ describe('Hero', function () {
   });
 
   it('has questsToComplete', function () {
-    assert.deepStrictEqual(hero.questsToComplete, [])
-  })
-
-  it('has completedQuests', function () {
-    assert.deepStrictEqual(hero.completedQuests, [])
+    assert.deepStrictEqual(hero.questList, [])
   })
 
   it('has moneyBag value', function () {
@@ -53,15 +49,13 @@ describe('Hero', function () {
   it('can add quests to questsToComplete', function () {
     hero.addQuest(quest1);
     hero.addQuest(quest2);
-    assert.deepStrictEqual(hero.questsToComplete, [quest1, quest2])
+    assert.deepStrictEqual(hero.questList, [quest1, quest2])
   });
 
   it('can remove quest', function () {
-    hero.addQuest(quest1);
     hero.addQuest(quest2);
     hero.completeQuest(quest2);
-    assert.deepStrictEqual(hero.questsToComplete, [quest1])
-    assert.deepStrictEqual(hero.completedQuests, [quest2])
+    assert.deepStrictEqual(quest2.status, true)
     assert.strictEqual(hero.moneyBag, 250);
   })
 
@@ -73,6 +67,22 @@ describe('Hero', function () {
   it('can eat favouriteFood', function () {
     hero.eatFood(food2);
     assert.strictEqual(hero.health, 105)
+  });
+
+  it('can sort by difficulty', function () {
+    hero.addQuest(quest1);
+    hero.addQuest(quest2);
+    hero.addQuest(quest3);
+    hero.sortQuestsByDifficulty();
+    assert.deepStrictEqual(hero.questList, [quest3, quest2, quest1])
+  });
+
+  xit('can sort by urgency', function () {
+
+  });
+
+  xit('can sort by reward', function () {
+
   });
 
 });
