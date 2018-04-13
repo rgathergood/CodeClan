@@ -29,4 +29,9 @@ describe('Quest', function () {
     assert.strictEqual(quest1.status, false)
   });
 
+  it('can be marked as complete', function () {
+    quest1.markQuestComplete();
+    assert.deepStrictEqual(quest1.status, true)
+  });
+
 });

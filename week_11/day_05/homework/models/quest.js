@@ -6,4 +6,8 @@ const Quest = function (name, difficulty, urgency, reward) {
   this.status = false;
 }
 
+Quest.prototype.markQuestComplete = function () {
+   this.status = true;
+};
+
 module.exports = Quest;
