@@ -68,11 +68,13 @@ Hero.prototype.sortQuestsByReward = function (property) {
 };
 
 Hero.prototype.filterByComplete = function () {
-
+  const completedQuests = this.questList.filter(quest => {return quest.status});
+  return completedQuests;
 };
 
 Hero.prototype.filterByUncomplete = function () {
-
+  const uncompletedQuests = this.questList.filter(quest => {return !quest.status});
+  return uncompletedQuests;
 };
 
 module.exports = Hero;

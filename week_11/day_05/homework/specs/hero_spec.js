@@ -93,4 +93,20 @@ describe('Hero', function () {
     assert.deepStrictEqual(hero.questList, [quest3, quest2, quest1])
   });
 
+  it('can filterByComplete', function () {
+    hero.addQuest(quest1);
+    hero.addQuest(quest2);
+    hero.addQuest(quest3);
+    hero.completeQuest(quest2);
+    assert.deepStrictEqual(hero.filterByComplete(), [quest2])
+  });
+
+  it('can filterByUncomplete', function () {
+    hero.addQuest(quest1);
+    hero.addQuest(quest2);
+    hero.addQuest(quest3);
+    hero.completeQuest(quest2);
+    assert.deepStrictEqual(hero.filterByUncomplete(), [quest1, quest3])
+  });
+
 });
