@@ -41,6 +41,11 @@ describe('Hero', function () {
     assert.strictEqual(hero.saysHello(), 'Hello my name is Boromir!')
   });
 
+  it('can add to moneyBag', function () {
+    hero.addMoney(10);
+    assert.strictEqual(hero.moneyBag, 10);
+  });
+
   it('can add quests to questsToComplete', function () {
     hero.addQuest(quest1);
     hero.addQuest(quest2);
@@ -53,6 +58,7 @@ describe('Hero', function () {
     hero.completeQuest(quest2);
     assert.deepStrictEqual(hero.questsToComplete, [quest1])
     assert.deepStrictEqual(hero.completedQuests, [quest2])
+    assert.strictEqual(hero.moneyBag, 250);
   })
 
 });

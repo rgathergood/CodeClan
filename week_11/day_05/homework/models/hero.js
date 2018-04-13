@@ -15,10 +15,15 @@ Hero.prototype.addQuest = function (quest) {
   this.questsToComplete.push(quest);
 };
 
+Hero.prototype.addMoney = function (amount) {
+  this.moneyBag += amount;
+};
+
 Hero.prototype.completeQuest = function (quest) {
   quest.markQuestComplete();
   const index = this.questsToComplete.indexOf(quest);
   this.questsToComplete.splice(index, 1);
+  this.addMoney(quest.reward);
   this.completedQuests.push(quest);
 };
 
