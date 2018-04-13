@@ -3,6 +3,7 @@ const Hero = function (name, health, favouriteFood) {
   this.health = health;
   this.favouriteFood = favouriteFood;
   this.tasksToComplete = [];
+  this.moneyBag = 0;
 }
 
 Hero.prototype.saysHello = function () {

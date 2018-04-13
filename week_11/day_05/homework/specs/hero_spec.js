@@ -1,5 +1,6 @@
 const assert = require('assert');
 const Hero = require('../models/hero.js');
+const Quest = require('../models/quest.js');
 
 describe('Hero', function () {
   let hero;
@@ -18,6 +19,10 @@ describe('Hero', function () {
 
   it('has a favouriteFood', function () {
     assert.strictEqual(hero.favouriteFood, 'Eggs')
+  });
+
+  it('has moneyBag value', function () {
+    assert.strictEqual(hero.moneyBag, 0)
   });
 
   it('can say their name', function () {
