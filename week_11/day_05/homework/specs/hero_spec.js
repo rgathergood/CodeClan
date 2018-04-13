@@ -118,4 +118,12 @@ describe('Hero', function () {
     assert.strictEqual(hero.health, 55)
   });
 
+  it('can calculatePotentialRewardTotal', function () {
+    hero.addQuest(quest1);
+    hero.addQuest(quest2);
+    hero.addQuest(quest3);
+    hero.completeQuest(quest2);
+    assert.strictEqual(hero.calculatePotentialRewardTotal(), 500)
+  });
+
 });

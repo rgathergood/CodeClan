@@ -77,4 +77,9 @@ Hero.prototype.filterByUncomplete = function () {
   return uncompletedQuests;
 };
 
+Hero.prototype.calculatePotentialRewardTotal = function () {
+  const uncompletedQuests = this.filterByUncomplete()
+  return uncompletedQuests.reduce((sum, quest) => sum += quest.reward, 0)
+};
+
 module.exports = Hero;
