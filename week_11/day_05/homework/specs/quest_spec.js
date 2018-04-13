@@ -6,7 +6,7 @@ describe('Quest', function () {
   let quest1;
 
   beforeEach( function () {
-    quest1 = new Quest('Bake a Cake', 4, 'Low', 100)
+    quest1 = new Quest('Bake a Cake', 4, 1, 100)
   });
 
   it('has name', function () {
@@ -18,7 +18,7 @@ describe('Quest', function () {
   });
 
   it('has urgency', function () {
-    assert.strictEqual(quest1.urgency, 'Low')
+    assert.strictEqual(quest1.urgency, 1)
   });
 
   it('has reward', function () {

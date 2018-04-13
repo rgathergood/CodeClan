@@ -10,9 +10,9 @@ describe('Hero', function () {
 
   beforeEach( function () {
     hero = new Hero('Boromir', 75, 'Eggs')
-    quest1 = new Quest('Bake a Cake', 4, 'Low', 100)
-    quest2 = new Quest('Kill some orcs', 6, 'Medium', 250)
-    quest3 = new Quest('Save Hobbits', 8, 'High', 400)
+    quest1 = new Quest('Bake a Cake', 4, 1, 100)
+    quest2 = new Quest('Kill some orcs', 6, 3, 250)
+    quest3 = new Quest('Save Hobbits', 8, 2, 400)
     food1 = new Food('Cheese', 20)
     food2 = new Food('Eggs', 20)
   });
@@ -77,12 +77,20 @@ describe('Hero', function () {
     assert.deepStrictEqual(hero.questList, [quest3, quest2, quest1])
   });
 
-  xit('can sort by urgency', function () {
-
+  it('can sort by urgency', function () {
+    hero.addQuest(quest1);
+    hero.addQuest(quest2);
+    hero.addQuest(quest3);
+    hero.sortQuestsByUrgency();
+    assert.deepStrictEqual(hero.questList, [quest2, quest3, quest1])
   });
 
-  xit('can sort by reward', function () {
-
+  it('can sort by reward', function () {
+    hero.addQuest(quest1);
+    hero.addQuest(quest2);
+    hero.addQuest(quest3);
+    hero.sortQuestsByReward();
+    assert.deepStrictEqual(hero.questList, [quest3, quest2, quest1])
   });
 
 });

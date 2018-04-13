@@ -44,11 +44,27 @@ Hero.prototype.sortQuestsByDifficulty = function () {
 };
 
 Hero.prototype.sortQuestsByUrgency = function (property) {
-
+  this.questList.sort((questA, questB) => {
+    if (questA.urgency > questB.urgency) {
+      return -1;
+    }
+    if (questA.urgency < questB.urgency) {
+      return 1;
+    }
+    return 0;
+  });
 };
 
 Hero.prototype.sortQuestsByReward = function (property) {
-
+  this.questList.sort((questA, questB) => {
+    if (questA.reward > questB.reward) {
+      return -1;
+    }
+    if (questA.reward < questB.reward) {
+      return 1;
+    }
+    return 0;
+  });
 };
 
 Hero.prototype.filterByComplete = function () {
