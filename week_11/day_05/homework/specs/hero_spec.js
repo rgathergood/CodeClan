@@ -2,11 +2,13 @@ const assert = require('assert');
 const Hero = require('../models/hero.js');
 const Quest = require('../models/quest.js');
 const Food = require('../models/food.js');
+const Rat = require('../models/rat.js');
 
 describe('Hero', function () {
   let hero;
   let quest1;
   let food1;
+  let rat;
 
   beforeEach( function () {
     hero = new Hero('Boromir', 75, 'Eggs')
@@ -15,6 +17,7 @@ describe('Hero', function () {
     quest3 = new Quest('Save Hobbits', 8, 2, 400)
     food1 = new Food('Cheese', 20)
     food2 = new Food('Eggs', 20)
+    rat = new Rat
   });
 
   it('has a name', function () {
@@ -107,6 +110,12 @@ describe('Hero', function () {
     hero.addQuest(quest3);
     hero.completeQuest(quest2);
     assert.deepStrictEqual(hero.filterByUncomplete(), [quest1, quest3])
+  });
+
+  it('can eat food touched by rat', function () {
+    rat.touchFood(food1);
+    hero.eatFood(food1);
+    assert.strictEqual(hero.health, 55)
   });
 
 });
