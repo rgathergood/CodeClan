@@ -27,4 +27,12 @@ Hero.prototype.completeQuest = function (quest) {
   this.completedQuests.push(quest);
 };
 
+Hero.prototype.eatFood = function (food) {
+  if (this.favouriteFood === food.name) {
+    this.health += (food.healthPoints * 1.5);
+  } else {
+    this.health += food.healthPoints;
+  }
+};
+
 module.exports = Hero;

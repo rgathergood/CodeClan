@@ -1,16 +1,20 @@
 const assert = require('assert');
 const Hero = require('../models/hero.js');
 const Quest = require('../models/quest.js');
+const Food = require('../models/food.js');
 
 describe('Hero', function () {
   let hero;
   let quest1;
+  let food1;
 
   beforeEach( function () {
     hero = new Hero('Boromir', 75, 'Eggs')
     quest1 = new Quest('Bake a Cake', 4, 'Low', 100)
     quest2 = new Quest('Kill some orcs', 6, 'Medium', 250)
     quest3 = new Quest('Save Hobbits', 8, 'High', 400)
+    food1 = new Food('Cheese', 20)
+    food2 = new Food('Eggs', 20)
   });
 
   it('has a name', function () {
@@ -60,5 +64,15 @@ describe('Hero', function () {
     assert.deepStrictEqual(hero.completedQuests, [quest2])
     assert.strictEqual(hero.moneyBag, 250);
   })
+
+  it('can eat food', function () {
+    hero.eatFood(food1);
+    assert.strictEqual(hero.health, 95)
+  });
+
+  it('can eat favouriteFood', function () {
+    hero.eatFood(food2);
+    assert.strictEqual(hero.health, 105)
+  });
 
 });
