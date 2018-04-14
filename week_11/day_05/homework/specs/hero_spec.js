@@ -126,4 +126,25 @@ describe('Hero', function () {
     assert.strictEqual(hero.calculatePotentialRewardTotal(), 500)
   });
 
+  it('can calculateAverageDifficulty', function () {
+    hero.addQuest(quest1);
+    hero.addQuest(quest2);
+    hero.addQuest(quest3);
+    assert.strictEqual(hero.calculateAverageDifficulty(), 6)
+  });
+
+  it('can calculateAverageUrgency', function () {
+    hero.addQuest(quest1);
+    hero.addQuest(quest2);
+    hero.addQuest(quest3);
+    assert.strictEqual(hero.calculateAverageUrgency(), 2)
+  });
+
+  it('can calculateAverageReward', function () {
+    hero.addQuest(quest1);
+    hero.addQuest(quest2);
+    hero.addQuest(quest3);
+    assert.strictEqual(hero.calculateAverageReward(), 250)
+  });
+
 });
