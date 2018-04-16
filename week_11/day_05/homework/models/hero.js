@@ -84,22 +84,22 @@ Hero.prototype.calculatePotentialRewardTotal = function () {
 
 Hero.prototype.calculateAverageDifficulty = function () {
   numberOfQuests = this.questList.length;
-  total =  this.questList.reduce((sum, quest) => sum += quest.difficulty, 0)
-  result = total / numberOfQuests;
+  const total =  this.questList.reduce((sum, quest) => sum += quest.difficulty, 0)
+  const result = total / numberOfQuests;
   return Math.ceil(result);
 };
 
 Hero.prototype.calculateAverageUrgency = function () {
   numberOfQuests = this.questList.length;
-  total =  this.questList.reduce((sum, quest) => sum += quest.urgency, 0)
-  result = total / numberOfQuests;
+  const total =  this.questList.reduce((sum, quest) => sum += quest.urgency, 0)
+  const result = total / numberOfQuests;
   return Math.ceil(result);
 };
 
 Hero.prototype.calculateAverageReward = function () {
   numberOfQuests = this.questList.length;
-  total =  this.questList.reduce((sum, quest) => sum += quest.reward, 0)
-  result = total / numberOfQuests;
+  const total =  this.questList.reduce((sum, quest) => sum += quest.reward, 0)
+  const result = total / numberOfQuests;
   return Math.ceil(result);
 };
 
