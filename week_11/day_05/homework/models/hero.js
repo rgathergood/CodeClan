@@ -43,7 +43,7 @@ Hero.prototype.sortQuestsByDifficulty = function () {
   });
 };
 
-Hero.prototype.sortQuestsByUrgency = function (property) {
+Hero.prototype.sortQuestsByUrgency = function () {
   this.questList.sort((questA, questB) => {
     if (questA.urgency > questB.urgency) {
       return -1;
@@ -55,7 +55,7 @@ Hero.prototype.sortQuestsByUrgency = function (property) {
   });
 };
 
-Hero.prototype.sortQuestsByReward = function (property) {
+Hero.prototype.sortQuestsByReward = function () {
   this.questList.sort((questA, questB) => {
     if (questA.reward > questB.reward) {
       return -1;
