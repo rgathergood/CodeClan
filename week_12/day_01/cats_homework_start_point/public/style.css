@@ -1,0 +1,22 @@
+#cats {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-style: italic;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+ul {
+  margin: 4rem;
+  border-width: 3rem;
+  border-color: rgb(11, 245, 245);
+}
+
+li {
+  list-style-type: none;
+  margin: 1rem;
+}
