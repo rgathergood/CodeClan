@@ -49,14 +49,13 @@ document.addEventListener('DOMContentLoaded', () => {
   //
   // container.appendChild(image);
 
-  const createImage = function (imgSrc, container) {
+  const createImage = function (src, container) {
     const image = document.createElement('img');
-    image.src = imgSrc
+    image.src = src
     container.appendChild(image)
   }
 
-  let count;
-  for (count = 1; count < 16; count ++)
+  for (let count = 1; count <= 15; count ++)
   createImage(`images/IMG${count}.JPG`, container)
 
 });
