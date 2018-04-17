@@ -5,18 +5,26 @@
   font-style: italic;
 }
 
+body {
+  background-color: rgb(23, 233, 233);
+}
+
 h1 {
   text-align: center;
   margin-top: 4rem;
 }
 
 ul {
-  margin: 4rem;
-  border-width: 3rem;
-  border-color: rgb(11, 245, 245);
+  margin: 2rem;
+  background-color: white;
 }
 
 li {
   list-style-type: none;
   margin: 1rem;
+}
+
+img {
+  border: 1rem solid rgb(23, 233, 233);
+  width: 500px;
 }
