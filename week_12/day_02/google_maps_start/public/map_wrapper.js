@@ -33,3 +33,24 @@ MapWrapper.prototype.addClickListener = function () {
     this.addMarker({lat, lng});
   });
 }
+
+MapWrapper.prototype.codeClanEdinburgh = function (cceButton) {
+  cceButton.addEventListener('click', () => {
+    this.googleMap.setCenter(new google.maps.LatLng(55.946962, -3.201958))
+  });
+}
+
+
+MapWrapper.prototype.codeClanGlasgow = function (ccgButton) {
+  ccgButton.addEventListener('click', () => {
+    this.googleMap.setCenter(new google.maps.LatLng(55.865477, -4.257998))
+  });
+}
+
+// MapWrapper.prototype.whereAmI = function (whereAmIBtn) {
+//   whereAmIBtn.addEventListener('click', () => {
+//     navigator.geolocation.getCurrentPosition((position) => {
+//       this.googleMap.setCenter(new google.maps)
+//     })
+//   })
+// };
