@@ -31,7 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
   '</div>';
 
   mainMap.addMarker(codeclanE, contentStringE);
-  mainMap.addMarker(codeclanG, contentStringG);
 
   mainMap.addClickListener();
 
@@ -40,6 +39,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const codeClanGlasgowButton = document.querySelector('#ccgButton');
   mainMap.codeClanGlasgow(codeClanGlasgowButton);
+
+  mainMap.addMarker(codeclanG, contentStringG);
 
   const whereAmIButton = document.querySelector('#whereAmIBtn');
   mainMap.whereAmI(whereAmIButton);

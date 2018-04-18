@@ -11,7 +11,8 @@ MapWrapper.prototype.addMarker = function (coords, contentString, icon) {
   const marker = new google.maps.Marker({
     map: this.googleMap,
     position: coords,
-    icon: icon
+    icon: icon,
+    animation: google.maps.Animation.DROP
   });
 
   const infoWindow = new google.maps.InfoWindow ({
