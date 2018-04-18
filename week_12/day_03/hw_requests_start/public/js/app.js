@@ -15,30 +15,31 @@ const makeRequest = function (url, callback) {
 const requestComplete = function () {
   if (this.status != 200) return;
   const jsonString = this.responseText;
-  const beers = JSON.parse(jsonString);
-  populateList(beers);
+  beers = JSON.parse(jsonString);
+  loopBeers();
 }
 
-const populateList = function (beers) {
+const loopBeers = function () {
+  beers.forEach((beer) => populateList(beer));
+}
+
+const populateList = function (beer) {
   const mainDiv = document.querySelector('#beer-list');
-  beers.forEach((beer) => {
 
-    const div = document.createElement('div');
-    const beerName = document.createElement('h3');
-    const beerTagline = document.createElement('h5');
-    const beerDescription = document.createElement('h5');
-    const beerImg = document.createElement('img');
+  const div = document.createElement('div');
+  const beerName = document.createElement('h2');
+  const beerImg = document.createElement('img');
+  const beerTagline = document.createElement('h5');
+  const beerDescription = document.createElement('h5');
 
-    beerName.textContent = beer.name;
-    beerTagline.textContent = beer.tagline;
-    beerDescription.textContent = beer.description;
-    beerImg.src = beer.image_url;
+  beerName.textContent = beer.name;
+  beerImg.src = beer.image_url;
+  beerTagline.textContent = beer.tagline;
+  beerDescription.textContent = beer.description;
 
-    mainDiv.appendChild(div);
-    div.appendChild(beerName);
-    div.appendChild(beerTagline);
-    div.appendChild(beerDescription);
-    div.appendChild(beerImg);
-
-  })
+  mainDiv.appendChild(div);
+  div.appendChild(beerName);
+  div.appendChild(beerImg);
+  div.appendChild(beerTagline);
+  div.appendChild(beerDescription);
 }

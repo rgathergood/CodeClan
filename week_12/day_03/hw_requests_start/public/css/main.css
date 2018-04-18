@@ -1,0 +1,18 @@
+body {
+  display: block;
+  margin: auto;
+  text-align: center;
+  font-family: 'Muli', sans-serif;
+}
+
+div {
+  border: solid 0.2rem #2CB0D5;
+}
+
+img {
+  height: 300px;
+}
+
+h2 {
+  text-shadow: 2px 2px #2CB0D5;
+}
