@@ -7,6 +7,9 @@ body {
 
 div {
   border: solid 0.2rem #2CB0D5;
+  width: 1000px;
+  display: block;
+  margin: auto;
 }
 
 img {
@@ -20,5 +23,11 @@ h2 {
 select {
   display: block;
   margin: auto;
+  margin-bottom: 1rem;
   font-size: 20px;
+  border: solid 0.2rem #2CB0D5;
+}
+
+#title {
+  height: 200px;
 }
