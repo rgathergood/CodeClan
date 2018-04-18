@@ -51,7 +51,7 @@ MapWrapper.prototype.whereAmI = function (whereAmIBtn) {
   whereAmIBtn.addEventListener('click', () => {
     navigator.geolocation.getCurrentPosition((position) => {
       this.googleMap.setCenter(new google.maps.LatLng(position.coords.latitude, position.coords.longitude));
-      this.addMarker({lat: position.coords.latitude, lng: position.coords.longitude}, 'You are here!', 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png')
+      this.addMarker({lat: position.coords.latitude, lng: position.coords.longitude}, 'You are here!', 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png')
     });
   });
 };
