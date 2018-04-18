@@ -47,10 +47,11 @@ MapWrapper.prototype.codeClanGlasgow = function (ccgButton) {
   });
 }
 
-// MapWrapper.prototype.whereAmI = function (whereAmIBtn) {
-//   whereAmIBtn.addEventListener('click', () => {
-//     navigator.geolocation.getCurrentPosition((position) => {
-//       this.googleMap.setCenter(new google.maps)
-//     })
-//   })
-// };
+MapWrapper.prototype.whereAmI = function (whereAmIBtn) {
+  whereAmIBtn.addEventListener('click', () => {
+    navigator.geolocation.getCurrentPosition((position) => {
+      this.googleMap.setCenter(new google.maps.LatLng(position.coords.latitude, position.coords.longitude));
+      this.addMarker({lat: position.coords.latitude, lng: position.coord.longitude}, 'You are here!', 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png')
+    });
+  });
+};

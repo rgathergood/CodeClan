@@ -41,4 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const codeClanGlasgowButton = document.querySelector('#ccgButton');
   mainMap.codeClanGlasgow(codeClanGlasgowButton);
 
+  const whereAmIButton = document.querySelector('#whereAmIBtn');
+  mainMap.whereAmI(whereAmIButton);
+
 });
