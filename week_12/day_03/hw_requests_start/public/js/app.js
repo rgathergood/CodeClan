@@ -40,7 +40,7 @@ const handleBeerSelection = function (event) {
 
 const displayBeerInformation = function (beer) {
   const mainDiv = document.querySelector('#beer-info');
-  mainDiv.innerHTML = ''
+  mainDiv.textContent = ''
 
   const beerName = document.createElement('h2');
   const beerImg = document.createElement('img');
