@@ -69,7 +69,11 @@ const displayBeerInformation = function (beer) {
   malts.textContent = `Malt: ${maltNames.join(", ")}`;
 
   const hopNames =[]
-  beer.ingredients.hops.forEach((hop) => hopNames.push(hop.name));
+  beer.ingredients.hops.forEach((hop) => {
+    if (!hopNames.includes(hop.name)) {
+      hopNames.push(hop.name);
+    }
+  });
   hops.textContent = `Hops: ${hopNames.join(", ")}`;
 
   yeast.textContent = `Yeast: ${beer.ingredients.yeast}`
