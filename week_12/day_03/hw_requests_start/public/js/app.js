@@ -42,7 +42,6 @@ const displayBeerInformation = function (beer) {
   const mainDiv = document.querySelector('#beer-info');
   mainDiv.innerHTML = ''
 
-  const div = document.createElement('div');
   const beerName = document.createElement('h2');
   const beerImg = document.createElement('img');
   const beerTagline = document.createElement('h5');
@@ -50,6 +49,7 @@ const displayBeerInformation = function (beer) {
   const beerBrewersTips = document.createElement('h6');
   const beerDescription = document.createElement('h5');
   const ingredientsDiv = document.createElement('div');
+  ingredientsDiv.classList.add("ingredientsDiv");
   const ingredientsDivTitle = document.createElement('h4');
   const malts = document.createElement('h5');
   const hops = document.createElement('h5');
@@ -57,12 +57,12 @@ const displayBeerInformation = function (beer) {
 
   beerName.textContent = beer.name;
   beerImg.src = beer.image_url;
+  beerImg.alt = beer.name;
   beerTagline.textContent = beer.tagline;
   beerDescription.textContent = beer.description;
   beerFoodPairing.textContent = `Food Pairings: ${beer.food_pairing}`;
   beerBrewersTips.textContent = `Brewers Tips: ${beer.brewers_tips}`;
   ingredientsDivTitle.textContent = 'Ingredients';
-
 
   const maltNames =[]
   beer.ingredients.malt.forEach((malt) => maltNames.push(malt.name));
@@ -74,15 +74,13 @@ const displayBeerInformation = function (beer) {
 
   yeast.textContent = `Yeast: ${beer.ingredients.yeast}`
 
-
-  mainDiv.appendChild(div);
-  div.appendChild(beerName);
-  div.appendChild(beerImg);
-  div.appendChild(beerTagline);
-  div.appendChild(beerDescription);
-  div.appendChild(beerFoodPairing);
-  div.appendChild(beerBrewersTips);
-  div.appendChild(ingredientsDiv);
+  mainDiv.appendChild(beerName);
+  mainDiv.appendChild(beerImg);
+  mainDiv.appendChild(beerTagline);
+  mainDiv.appendChild(beerDescription);
+  mainDiv.appendChild(beerFoodPairing);
+  mainDiv.appendChild(beerBrewersTips);
+  mainDiv.appendChild(ingredientsDiv);
   ingredientsDiv.appendChild(ingredientsDivTitle);
   ingredientsDiv.appendChild(malts);
   ingredientsDiv.appendChild(hops);

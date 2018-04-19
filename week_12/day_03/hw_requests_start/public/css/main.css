@@ -7,9 +7,10 @@ body {
 
 div {
   border: solid 0.2rem #2CB0D5;
-  width: 1000px;
+  width: 800px;
   display: block;
   margin: auto;
+  margin-bottom: 1rem;
 }
 
 img {
@@ -30,4 +31,12 @@ select {
 
 #title {
   height: 200px;
+}
+
+.ingredientsDiv {
+  border-top: solid 0.2rem #2CB0D5;
+  width: 600px;
+  display: block;
+  margin: auto;
+  margin-bottom: 1rem;
 }
