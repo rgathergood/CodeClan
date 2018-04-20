@@ -1,6 +1,6 @@
 const PlanetView = function(selectElement, planetContainer) {
-  this.selectElement = selectElement; //html select element
-  this.planetContainer = planetContainer //html div element
+  this.selectElement = selectElement;
+  this.planetContainer = planetContainer;
 }
 
 PlanetView.prototype.renderSelect = function (planetData) {
