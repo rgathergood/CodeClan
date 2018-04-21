@@ -15,6 +15,12 @@ ShipView.prototype.renderSelect = function (shipData) {
 ShipView.prototype.renderDetail = function (ship) {
   this.shipContainer.innerHTML = "";
 
+  function prettify(str) {
+    return str.replace(/(-|^)([^-]?)/g, function(_, prep, letter) {
+      return (prep && ' ') + letter.toUpperCase();
+    });
+  }
+
   function commafy( num ) {
     var str = num.toString().split('.');
     if (str[0].length >= 5) {
@@ -43,7 +49,12 @@ ShipView.prototype.renderDetail = function (ship) {
   this.shipContainer.appendChild(shipManufacturer);
 
   const shipCost = document.createElement('p');
-  const cost = commafy(ship.cost_in_credits)
+  let cost = ship.cost_in_credits;
+  if (cost === 'unknown') {
+    cost = prettify(cost)
+  } else {
+    cost = commafy(cost);
+  }
   shipCost.textContent = 'Cost: ' + cost + ' Credits';
   this.shipContainer.appendChild(shipCost);
 
