@@ -43,7 +43,7 @@ PlanetView.prototype.renderDetail = function (planet) {
   this.planetContainer.appendChild(planetImg);
 
   const planetClimate = document.createElement('p');
-  displayClimate = prettify(planet.climate);
+  const displayClimate = prettify(planet.climate);
   planetClimate.textContent = 'Climate: ' + displayClimate;
   this.planetContainer.appendChild(planetClimate);
 
