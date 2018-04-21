@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
   shipSelect.addEventListener('change', (event) => {
     const selectedShipIndex = event.target.value
     const selectedShip = shipData.data[selectedShipIndex];
-    shipView.renderDetail(selectedPlanet)
+    shipView.renderDetail(selectedShip)
   });
 
   shipData.getData((data) => {

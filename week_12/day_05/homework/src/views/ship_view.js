@@ -13,7 +13,7 @@ ShipView.prototype.renderSelect = function (shipData) {
 };
 
 ShipView.prototype.renderDetail = function (ship) {
-  this.planetContainer.innerHTML = "";
+  this.shipContainer.innerHTML = "";
 
   const shipName = document.createElement('h3');
   shipName.textContent = ship.name;
