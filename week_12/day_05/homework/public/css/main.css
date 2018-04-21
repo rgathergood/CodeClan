@@ -3,6 +3,41 @@
   src: url("Starjedi.ttf") format("truetype");
 }
 
+header {
+  justify-content: center;
+  display: flex;
+}
+
 h1 {
   font-family: 'Starjedi';
+}
+
+h2 {
+  font-family: 'Starjedi';
+  display: block;
+  text-align: center;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+img {
+  height: 300px;
+  border-radius: 30px;
+}
+
+#main-div {
+  margin: 3rem;
+}
+
+#planet-div {
+  float: left;
+  margin-right: 1rem;
+  margin-left: 8rem;
+}
+
+#ship-div {
+  float: left;
+  margin-left: 4rem;
 }

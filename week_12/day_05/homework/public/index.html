@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="/css/main.css">
-    <script src="js/bundle.js"></script>
-    <title>Star Journey</title>
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <script src="js/bundle.js"></script>
+  <title>Star Journey</title>
+</head>
+<body>
+  <header>
     <h1>Star Journey</h1>
-    <select id="planet-select">
-      <option selected disabled>Select Your Destination</option>
-    </select>
-    <div id="planet-detail-view"></div>
-  </body>
+  </header>
+  <h2>Where in the Galaxy do you want to go?</h2>
+  <div id="main-div">
+    <div id="planet-div">
+      <select id="planet-select">
+        <option selected disabled>Select Your Destination</option>
+      </select>
+      <div id="planet-detail-view"></div>
+    </div>
+    <div id="ship-div">
+      <select id="ship-select">
+        <option selected disabled>Select Your Spaceship</option>
+      </select>
+      <div id="ship-detail-view"></div>
+    </div>
+  </div>
+</body>
 </html>

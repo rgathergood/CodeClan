@@ -32,14 +32,14 @@ PlanetView.prototype.renderDetail = function (planet) {
     return str.join('.');
   }
 
-  const planetName = document.createElement('p');
+  const planetName = document.createElement('h3');
   planetName.textContent = planet.name;
   this.planetContainer.appendChild(planetName);
 
   console.log(planet);
 
   const planetImg = document.createElement('img');
-  planetImg.src = `../../public/images/${planet.name}.png`;
+  planetImg.src = `images/${planet.name}.png`;
   this.planetContainer.appendChild(planetImg);
 
   const planetClimate = document.createElement('p');
@@ -53,12 +53,14 @@ PlanetView.prototype.renderDetail = function (planet) {
   this.planetContainer.appendChild(planetTerrain);
 
   const planetPopulation = document.createElement('p');
-  const population = planet.population;
+  let population = planet.population;
+
   if (population === 'unknown') {
-    prettify(population)}
-    else {
-      commafy(population);
-    }
+    population = prettify(population)
+  } else {
+    population = commafy(population);
+  }
+
   planetPopulation.textContent = 'Population: ' + population;
   this.planetContainer.appendChild(planetPopulation);
 
