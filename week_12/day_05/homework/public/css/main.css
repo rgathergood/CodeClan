@@ -5,40 +5,61 @@
 
 header {
   justify-content: center;
-  display: flex;
-}
-
-h1 {
+  background-image: url('../images/header_background.png');
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   font-family: 'Starjedi';
-}
-
-h2 {
-  font-family: 'Starjedi';
-  display: block;
+  color: #ffd700;
   text-align: center;
+  -webkit-text-stroke: 1px black;
+  margin: 0;
+  overflow: auto;
 }
 
 body {
   font-family: 'Roboto', sans-serif;
+  background-color: rgb(204, 204, 204, 0.5);
 }
 
 img {
   height: 300px;
+  max-width: 400px;
+  border: 2px solid #ffd700;
   border-radius: 30px;
 }
 
+select {
+  color: #ffd700;
+  background-color: black;
+  border: 2px solid #ffd700;
+  border-radius: 5px;
+}
+
 #main-div {
-  margin: 3rem;
+  width: 100%;
+  border-top: 6px solid #ffd700;
 }
 
 #planet-div {
+  max-width: 550px;
   float: left;
-  margin-right: 1rem;
-  margin-left: 10rem;
+  margin-top: 1rem;
+  margin-right: 0.5rem;
+  margin-left: 2.5rem;
+  margin-bottom: 2rem;
+  border: 3px solid #ffd700;
+  border-radius: 5px;
+  padding: 5px;
 }
 
 #ship-div {
+  max-width: 550px;
   float: right;
-  margin-right: 10rem;
-  margin-left: 1rem;
+  margin-top: 1rem;
+  margin-right: 2.5rem;
+  margin-left: 0.5rem;
+  margin-bottom: 2rem;
+  border: 3px solid #ffd700;
+  border-radius: 5px;
+  padding: 5px
 }
