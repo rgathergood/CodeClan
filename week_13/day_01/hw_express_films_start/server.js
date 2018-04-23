@@ -5,6 +5,9 @@ const bodyParser = require('body-parser');
 const filmsRouter = require('./controllers/films_controller.js')
 app.use('/films', filmsRouter);
 
+const booksRouter = require('./controllers/books_controller.js')
+app.use('/books', booksRouter);
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
