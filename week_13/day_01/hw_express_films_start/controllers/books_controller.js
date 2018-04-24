@@ -19,20 +19,20 @@ booksRouter.get('/:id', function (req, res) {
 booksRouter.post('/', function (req, res) {
   const newBook = req.body.book;
   booksData.add(newBook);
-  res.json({books: allBooks});
+  res.json({books: booksData.all()});
 });
 
 booksRouter.put('/:id', function (req, res) {
-  const updatedBook = req.body.book;
   const index = req.params.id;
-  booksData.update(index. updatedBook)
-  res.json({books: allBooks});p
+  const updatedBook = req.body.book;
+  booksData.update(index, updatedBook)
+  res.json({books: booksData.all()});
 });
 
 booksRouter.delete('/:id', function (req, res) {
   const index = req.params.id;
   booksData.delete(index)
-  res.json({books: allBooks});
+  res.json({books: booksData.all()});
 });
 
 module.exports = booksRouter;

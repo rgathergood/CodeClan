@@ -21,9 +21,10 @@ filmsRouter.post('/', function (req, res) {
 });
 
 filmsRouter.put('/:id', function (req, res) {
-  const updatedFilm = req.body.film;
   const index = req.params.id;
-  filmsData.update(index. updatedFilm)
+  const updatedFilm = req.body.film;
+  filmsData.update(index, updatedFilm)
+  // res.send() //no response
   res.json({films: filmsData.all()});
 });
 
