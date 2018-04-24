@@ -26,7 +26,7 @@ booksRouter.put('/:id', function (req, res) {
   const updatedBook = req.body.book;
   const index = req.params.id;
   booksData.update(index. updatedBook)
-  res.json({books: allBooks});
+  res.json({books: allBooks});p
 });
 
 booksRouter.delete('/:id', function (req, res) {
