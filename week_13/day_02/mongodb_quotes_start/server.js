@@ -50,6 +50,22 @@ MongoClient.connect(
       });
     });
 
+    //DELETE ONE
+    server.delete('/api/quotes/:id', function (req, res) {
+      const id = req.params.id;
+      const objectID = ObjectID(id);
+
+      quotesCollection.deleteOne({_id: objectID}, function (err, result) {
+        if (err) {
+          console.error(err);
+          res.status(500);
+          res.send();
+        }
+
+        res.send();
+      });
+    });
+
     //DELETE ALL
     server.delete('/api/quotes', function (req, res) {
       quotesCollection.deleteMany({}, function (err, result) { //can also pass null or no object at all (only callback)
