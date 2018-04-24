@@ -50,6 +50,22 @@ MongoClient.connect(
       });
     });
 
+    //FIND BY ID
+    server.get('/api/quotes/:id', function (req, res) {
+      const id = req.params.id;
+      const objectID = ObjectID(id);
+
+      quotesCollection.find({_id: objectID}).toArray(function (err, result) {
+        if (err) {
+          console.error(err);
+          res.status(500);
+          res.send();
+        }
+
+        res.json(result);
+      });
+    });
+
     //DELETE ONE
     server.delete('/api/quotes/:id', function (req, res) {
       const id = req.params.id;
