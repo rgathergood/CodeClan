@@ -22,6 +22,7 @@ class FilmBox extends Component {
       <div className="film-box">
         Now Playing (UK Box Office)
         <FilmList data={this.state.data}/>
+        <p><a href="https://www.imdb.com/chart/boxoffice?pf_rd_m=A2FGELUUNOQJNL&pf_rd_p=d120b30e-f0de-4d19-a67b-80c0ca1f8c6e&pf_rd_r=T571TMZ6AKZY0K59YB00&pf_rd_s=right-6&pf_rd_t=15061&pf_rd_i=homepage&ref_=hm_cht_sm">See more box office results >></a></p>
       </div>
     );
   }

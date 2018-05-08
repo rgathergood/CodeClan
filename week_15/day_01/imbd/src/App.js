@@ -5,7 +5,10 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <FilmBox/>
+      <div>
+        <h1>IMBD</h1>
+        <FilmBox/>
+      </div>
     );
   }
 }
