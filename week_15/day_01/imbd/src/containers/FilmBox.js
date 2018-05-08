@@ -8,7 +8,7 @@ class FilmBox extends Component {
 
     this.state = {
       data: [
-        {id: 1, title: 'Avengers: Infinity War', opening: '£30.1M'},
+        {id: 1, title: 'Avengers: Infinity War', opening: '£30.1M', src: 'https://www.imdb.com/title/tt4154756/?pf_rd_m=A2FGELUUNOQJNL&pf_rd_p=d120b30e-f0de-4d19-a67b-80c0ca1f8c6e&pf_rd_r=VRBJBTQRHMFMGMDTKAM2&pf_rd_s=right-6&pf_rd_t=15061&pf_rd_i=homepage&ref_=hm_cht_t0'},
         {id: 2, title: 'The Guernsey Literary and Potato Peel Pie Society', opening: '£1.0M'},
         {id: 3, title: 'A Quiet Place', opening: '£0.9M'},
         {id: 4, title: 'Rampage', opening: '£0.7M'},
