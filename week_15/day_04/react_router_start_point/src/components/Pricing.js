@@ -1,9 +1,11 @@
 import React from "react";
 
-const Pricing = () => (
+const Pricing = (props) => (
   <div>
     <h4>Pricing</h4>
-    <p>£££££££</p>
+    <p>Hobby tier price: ${props.prices.hobby} per month</p>
+    <p>StartUp tier price: ${props.prices.startup} per month</p>
+    <p>Enterprise tier price: ${props.prices.enterprise} per month</p>
   </div>
 );
 
