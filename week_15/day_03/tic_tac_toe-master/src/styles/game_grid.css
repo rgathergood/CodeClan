@@ -7,3 +7,17 @@
   display: grid;
   text-align: center;
 }
+
+button {
+  width: 50px;
+  height: 25px;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 10px;
+  display: block;
+  text-align: center;
+}
+
+button:hover {
+  border: solid red;
+}

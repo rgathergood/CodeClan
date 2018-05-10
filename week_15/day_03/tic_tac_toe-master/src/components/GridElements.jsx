@@ -10,47 +10,47 @@ class GridElements extends React.Component {
         <div
           id={this.props.grid[0].id}
           className={this.props.grid[0].class}
-          onClick={this.props.handleCellClick}>1.1
+          onClick={this.props.handleCellClick}>
         </div>
         <div
           id={this.props.grid[1].id}
           className={this.props.grid[1].class}
-          onClick={this.props.handleCellClick}>1.2
+          onClick={this.props.handleCellClick}>
         </div>
         <div
           id={this.props.grid[2].id}
           className={this.props.grid[2].class}
-          onClick={this.props.handleCellClick}>1.3
+          onClick={this.props.handleCellClick}>
         </div>
         <div
           id={this.props.grid[3].id}
           className={this.props.grid[3].class}
-          onClick={this.props.handleCellClick}>2.1
+          onClick={this.props.handleCellClick}>
         </div>
         <div
           id={this.props.grid[4].id}
           className={this.props.grid[4].class}
-          onClick={this.props.handleCellClick}>2.2
+          onClick={this.props.handleCellClick}>
         </div>
         <div
           id={this.props.grid[5].id}
           className={this.props.grid[5].class}
-          onClick={this.props.handleCellClick}>2.3
+          onClick={this.props.handleCellClick}>
         </div>
         <div
           id={this.props.grid[6].id}
           className={this.props.grid[6].class}
-          onClick={this.props.handleCellClick}>3.1
+          onClick={this.props.handleCellClick}>
         </div>
         <div
           id={this.props.grid[7].id}
           className={this.props.grid[7].class}
-          onClick={this.props.handleCellClick}>3.2
+          onClick={this.props.handleCellClick}>
         </div>
         <div
           id={this.props.grid[8].id}
           className={this.props.grid[8].class}
-          onClick={this.props.handleCellClick}>3.3
+          onClick={this.props.handleCellClick}>
         </div>
       </div>
     )
