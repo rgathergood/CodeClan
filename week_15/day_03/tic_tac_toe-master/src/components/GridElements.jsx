@@ -55,7 +55,6 @@ class GridElements extends React.Component {
       </div>
     )
   }
-
 }
 
 export default GridElements;
