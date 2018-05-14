@@ -32,7 +32,4 @@ window.onload = function(){
     calculator.clearClick();
     updateView();
   };
-  
-
-
 }
